@@ -98,8 +98,8 @@ if __name__ == "__main__":
 
     disp_vis = (disp - disp.min()) / (disp.max() - disp.min()) * 255.0
     disp_vis = disp_vis.astype("uint8")
-    disp_vis = cv2.applyColorMap(disp_vis, cv2.COLORMAP_INFERNO)
-
+    # disp_vis = cv2.applyColorMap(disp_vis, cv2.COLORMAP_INFERNO)
+    # 改为灰度单通道输出尝试
     parent_path = os.path.abspath(os.path.join(args.output, os.pardir))
     if not os.path.exists(parent_path):
         os.makedirs(parent_path)
